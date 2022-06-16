@@ -8,7 +8,7 @@ import com.aa.microservice3gateway.model.User;
 public interface IUserService {
     User saveUser(User user);
     
-    Optional<User> findByUsername(String username);
+    Optional<User> findBUsername(String username);
 
     List<User> findAllUsers();
 }

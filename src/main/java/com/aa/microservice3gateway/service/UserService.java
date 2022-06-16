@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.aa.microservice3gateway.model.User;
 import com.aa.microservice3gateway.repository.IUserRepository;
 
 @Service
@@ -26,7 +26,7 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public Optional<User> findByUsername(String username) {
+    public Optional<User> findBUsername(String username) {
         return userRepository.findByUsername(username);
     }
 
@@ -34,4 +34,5 @@ public class UserService implements IUserService{
     public List<User> findAllUsers() {
         return userRepository.findAll();
     }
+
 }
